@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/theme-VERAJOHN.css" rel="stylesheet" />
+    <title>VeraJohn - Marketing Landing</title>
+    <style>
+      .marketing-page p {
+        color: var(--primary-500);
+      }
+      .marketing-page a.link {
+        line-height: 3rem;
+        color: var(--primary-900);
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      
+      .responsive {
+        width: 100%;
+        height: auto;
+      }
+
+      span.pink {
+        color: var(--secondary-200);
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .marketing-page h2, .marketing-page h3 {
+        color: var(--neutral-100);
+      }
+
+      section.row {
+        margin-bottom: 50px;
+      }
+
+      .column {
+        float: left;
+        width: 100%;
+        padding: 10px;
+      }
+
+      .column-33 {
+        width:calc(100% - 10px);
+        border: 1px solid var(--primary-600);
+        margin: 5px;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      p.bullet-style {
+        line-height: 1.5rem;
+      }
+
+      p.bullet-style i{
+        float: left;
+      }
+
+      @media screen and (min-width: 600px) {
+        .column {
+          width: 50%;
+        }
+
+        .main-mp h2 {
+          margin-top: 5rem;
+        }
+
+        .column-33 {
+          width:calc(33.33% - 10px);
+        }
+        .column-33:last-child {
+          min-height: 444px;
+        }
+
+      }
+    </style>
+  </head>
+
+  <body class="marketing-page">
+    <header>
+      <div class="left">
+        <button class="button-nobg button-res button-iconOnly">
+          <i class="icon icon-close"></i>
+        </button>
+        <h1 class="icon-lg icon-brandLogo">VeraJohn</h1>
+      </div>
+      <div class="right">
+        <button class="button-primary button-res">
+          <i class="icon icon-close"></i>Register
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <section class="row">
+          <div class="column">
+            <img class="market-banner responsive" src="./assets/images/banner-market.png">
+          </div>
+          <div class="column main-mp">
+            <h2>Get a bonus every Wednesday!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur turpis lacus, sit amet porta sem volutpat eget.</p>
+            <button class="button-secondary button-xs">
+              Register
+            </button>
+          </div>
+        </section>
+        <section class="row 3cols">
+          <div class="column column-33">
+            <picture><img class="market-banner responsive" src="./assets/images/banner-sm.png"></picture>
+            <h3>100% + 50 Free Spins on your 1st deposit!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur turpis lacus</p>
+            <div class="row">
+              <div class="column">
+                <button class="button-secondary button-xs">
+                  Register
+                </button>
+              </div>
+              <div class="column">
+               <a href="javascript:;" class="link">Show more</a>
+              </div>
+            </div>
+          </div>
+          <div class="column column-33">
+            <picture><img class="market-banner responsive" src="./assets/images/banner-sm.png"></picture>
+            <h3>Choose your own bonus!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur turpis lacus</p>
+            <div class="row">
+              <div class="column">
+                <button class="button-secondary button-xs">
+                  Register
+                </button>
+              </div>
+              <div class="column">
+               <a href="javascript:;" class="link">Show more</a>
+              </div>
+            </div>
+          </div>
+          <div class="column column-33">
+            <h3>100% + 50 Free Spins on your 1st deposit!</h3>
+            <p style="margin-bottom: 50px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Get up to $200 and 150 Free Spins <span class="pink">WAGER FREE</span></h2>
+            <p style="margin-bottom: 50px;">Promo Code: <span class="pink">VJ200</span></p>
+            
+              <p class="bullet-style"><i class="icon icon-arrow icon-xs"></i> Lorem ipsum dolor sit amet</p>
+              <p class="bullet-style"><i class="icon icon-arrow icon-xs"></i> Lorem ipsum dolor sit amet</p>
+              <p style="margin-bottom: 20px;" class="bullet-style"><i class="icon icon-arrow icon-xs"></i> Lorem ipsum dolor sit amet</p>
+
+            <button class="button-secondary button-xs">
+              Register
+            </button>
+          </div>
+        </section>
+        <section class="row">
+          <div class="column main-mp">
+            <h2>Get a bonus every Wednesday!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur turpis lacus, sit amet porta sem volutpat eget.</p>
+            <button class="button-secondary button-xs">
+              Register
+            </button>
+          </div>
+          <div class="column">
+            <img class="market-banner responsive" src="./assets/images/banner-market.png">
+          </div>
+        </section>
+        <section class="row">
+          <div class="column">
+            <img class="market-banner responsive" src="./assets/images/banner-market.png">
+          </div>
+          <div class="column main-mp">
+            <h2>Get a bonus every Wednesday!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur turpis lacus, sit amet porta sem volutpat eget.</p>
+            <button class="button-secondary button-xs">
+              Register
+            </button>
+          </div>
+        </section>
+       
+      </div>
+    </main>
+    <footer>
+      <div class="footer-wrap">
+        <h4 class="footer-heading">Safe Payments</h4>
+        <div class="items-group">
+          <i class="logo-pay-bitcoin">Bitcoin</i>
+          <i class="logo-pay-ecopayz">Ecopayz</i>
+          <i class="logo-pay-neteller">Neteller</i>
+          <i class="logo-pay-paypal">Paypal</i>
+          <i class="logo-pay-paysafecard">Paysafecard</i>
+          <i class="logo-pay-skrill">Skrill</i>
+          <i class="logo-pay-trustly">Trustly</i>
+          <i class="logo-pay-visa">Visa</i>
+          <i class="logo-pay-zimpler">Zimpler</i>
+          <i class="logo-pay-mastercard">Mastercard</i>
+        </div>
+        <h4 class="footer-heading">Game Providers</h4>
+        <div class="items-group">
+          <div class="logo-prov-asiagaming">asiagaming</div>
+          <div class="logo-prov-betsoft">betsoft</div>
+          <div class="logo-prov-curacao">curacao</div>
+          <div class="logo-prov-evolutiongaming">evolutiongaming</div>
+          <div class="logo-prov-ezugi">ezugi</div>
+          <div class="logo-prov-gameplay">gameplay</div>
+          <div class="logo-prov-microgaming">microgaming</div>
+          <div class="logo-prov-neteller">neteller</div>
+          <div class="logo-prov-pagcor">pagcor</div>
+          <div class="logo-prov-playngo">playngo</div>
+          <div class="logo-prov-quickspin">quickspin</div>
+          <div class="logo-prov-solidgaming">solidgaming</div>
+          <div class="logo-prov-taishan">taishan</div>
+          <div class="logo-prov-yggdrasil">yggdrasil</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

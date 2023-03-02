@@ -1,0 +1,204 @@
+// ICON CORE STYLES
+.icon, *[class*="icon-"] {
+    display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0;
+}
+
+// ICON SIZES IMPLEMENTATION
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+}
+ // mobile devices
+.icon-xs {
+    width: $icon-xs-mobile;
+    height: $icon-xs-mobile;
+}
+.icon-sm {
+    width: $icon-sm-mobile;
+    height: $icon-sm-mobile;
+}
+.icon-md {
+    width: $icon-md-mobile;
+    height: $icon-md-mobile;
+}
+.icon-lg {
+    width: $icon-lg-mobile;
+    height: $icon-lg-mobile;
+}
+@media only screen and (min-width: 768px) { // desktop devices
+    .icon-xs {
+        width: $icon-xs-size;
+        height: $icon-xs-size;
+    }
+    .icon-sm {
+        width: $icon-sm-size;
+        height: $icon-sm-size;
+    }
+    .icon-md {
+        width: $icon-md-size;
+        height: $icon-md-size;
+    }
+    .icon-lg {
+        width: $icon-lg-size;
+        height: $icon-lg-size;
+    }
+}
+
+
+// ICON BACKGROUNDS
+
+
+// -------------------- Extra Small Icons --------------------
+
+
+// Flags
+.icon-germany { background-image: url('../assets/icons/#{$imagePath}/flag-germany.svg'); }
+.icon-japan { background-image: url('../assets/icons/#{$imagePath}/flag-japan.svg'); }
+.icon-sweden { background-image: url('../assets/icons/#{$imagePath}/flag-sweden.svg'); }
+.icon-uk { background-image: url('../assets/icons/#{$imagePath}/flag-uk.svg'); }
+.icon-china { background-image: url('../assets/icons/#{$imagePath}/flag-china.svg'); }
+
+
+// -------------------- Small Icons --------------------
+
+
+// Game Category Badges
+.icon-favoriteOff { background-image: url('../assets/icons/#{$imagePath}/gametag-favoriteOff.svg'); }
+.icon-favoriteOn { background-image: url('../assets/icons/#{$imagePath}/gametag-favoriteOn.svg'); }
+.icon-hot { background-image: url('../assets/icons/#{$imagePath}/gametag-hot.svg'); }
+.icon-jackpot { background-image: url('../assets/icons/#{$imagePath}/gametag-jackpot.svg'); }
+.icon-maintenance { background-image: url('../assets/icons/#{$imagePath}/gametag-maintenance.svg'); }
+.icon-mobile { background-image: url('../assets/icons/#{$imagePath}/gametag-mobile.svg'); }
+.icon-new { background-image: url('../assets/icons/#{$imagePath}/gametag-new.svg'); }
+.icon-padlock { background-image: url('../assets/icons/#{$imagePath}/gametag-padlock.svg'); }
+.icon-promoted { background-image: url('../assets/icons/#{$imagePath}/gametag-promoted.svg'); }
+.icon-tournament { background-image: url('../assets/icons/#{$imagePath}/gametag-tournament.svg'); }
+
+// Settings
+.icon-attachment { background-image: url('../assets/icons/#{$imagePath}/settings-attachment.svg'); }
+.icon-deposit { background-image: url('../assets/icons/#{$imagePath}/settings-deposit.svg'); }
+.icon-download { background-image: url('../assets/icons/#{$imagePath}/settings-download.svg'); }
+.icon-fullscreen { background-image: url('../assets/icons/#{$imagePath}/settings-fullscreen.svg'); }
+.icon-info { background-image: url('../assets/icons/#{$imagePath}/settings-info.svg'); }
+.icon-passwordHide { background-image: url('../assets/icons/#{$imagePath}/settings-passwordHide.svg'); }
+.icon-passwordShow { background-image: url('../assets/icons/#{$imagePath}/settings-passwordShow.svg'); }
+.icon-settings { background-image: url('../assets/icons/#{$imagePath}/settings-settings.svg'); }
+.icon-support { background-image: url('../assets/icons/#{$imagePath}/settings-support.svg'); }
+.icon-transactions { background-image: url('../assets/icons/#{$imagePath}/settings-transactions.svg'); }
+.icon-user { background-image: url('../assets/icons/#{$imagePath}/settings-user.svg'); }
+
+// Game Related
+.icon-all { background-image: url('../assets/icons/#{$imagePath}/game-all.svg'); }
+.icon-livecasinos { background-image: url('../assets/icons/#{$imagePath}/game-livecasinos.svg'); }
+.icon-slots { background-image: url('../assets/icons/#{$imagePath}/game-slots.svg'); }
+.icon-table { background-image: url('../assets/icons/#{$imagePath}/game-table.svg'); }
+
+// Navigational & Notification
+.icon-18plus { background-image: url('../assets/icons/#{$imagePath}/n-18plus.svg'); }
+.icon-20plus { background-image: url('../assets/icons/#{$imagePath}/n-20plus.svg'); }
+.icon-arrow { background-image: url('../assets/icons/#{$imagePath}/n-arrow.svg'); }
+.icon-bell { background-image: url('../assets/icons/#{$imagePath}/n-bell.svg'); }
+.icon-calendar { background-image: url('../assets/icons/#{$imagePath}/n-calendar.svg'); }
+.icon-carouselArrow { background-image: url('../assets/icons/#{$imagePath}/n-carouselArrow.svg'); }
+.icon-close { background-image: url('../assets/icons/#{$imagePath}/n-close.svg'); }
+.icon-declined { background-image: url('../assets/icons/#{$imagePath}/n-declined.svg'); }
+.icon-declinedX { background-image: url('../assets/icons/#{$imagePath}/n-declinedX.svg'); }
+.icon-desktop { background-image: url('../assets/icons/#{$imagePath}/n-desktop.svg'); }
+.icon-dropdown { background-image: url('../assets/icons/#{$imagePath}/n-dropdown.svg'); }
+.icon-email { background-image: url('../assets/icons/#{$imagePath}/n-email.svg'); }
+.icon-expand { background-image: url('../assets/icons/#{$imagePath}/n-expand.svg'); }
+.icon-filter { background-image: url('../assets/icons/#{$imagePath}/n-filter.svg'); }
+.icon-grid { background-image: url('../assets/icons/#{$imagePath}/n-grid.svg'); }
+.icon-home { background-image: url('../assets/icons/#{$imagePath}/n-home.svg'); }
+.icon-info { background-image: url('../assets/icons/#{$imagePath}/n-info.svg'); }
+.icon-link { background-image: url('../assets/icons/#{$imagePath}/n-link.svg'); }
+.icon-list { background-image: url('../assets/icons/#{$imagePath}/n-list.svg'); }
+.icon-lock { background-image: url('../assets/icons/#{$imagePath}/n-lock.svg'); }
+.icon-menu { background-image: url('../assets/icons/#{$imagePath}/n-menu.svg'); }
+.icon-minimize { background-image: url('../assets/icons/#{$imagePath}/n-minimize.svg'); }
+.icon-pendingA { background-image: url('../assets/icons/#{$imagePath}/n-pendingA.svg'); }
+.icon-pendingB { background-image: url('../assets/icons/#{$imagePath}/n-pendingB.svg'); }
+.icon-reset { background-image: url('../assets/icons/#{$imagePath}/n-reset.svg'); }
+.icon-search { background-image: url('../assets/icons/#{$imagePath}/n-search.svg'); }
+.icon-step1 { background-image: url('../assets/icons/#{$imagePath}/n-step1.svg'); }
+.icon-step1A { background-image: url('../assets/icons/#{$imagePath}/n-step1A.svg'); }
+.icon-step2 { background-image: url('../assets/icons/#{$imagePath}/n-step2.svg'); }
+.icon-step2A { background-image: url('../assets/icons/#{$imagePath}/n-step2A.svg'); }
+.icon-step3 { background-image: url('../assets/icons/#{$imagePath}/n-step3.svg'); }
+.icon-step3A { background-image: url('../assets/icons/#{$imagePath}/n-step3A.svg'); }
+.icon-stepSuccess { background-image: url('../assets/icons/#{$imagePath}/n-stepSuccess.svg'); }
+.icon-successA { background-image: url('../assets/icons/#{$imagePath}/n-successA.svg'); }
+.icon-successB { background-image: url('../assets/icons/#{$imagePath}/n-successB.svg'); }
+.icon-timeClosed { background-image: url('../assets/icons/#{$imagePath}/n-timeClosed.svg'); }
+.icon-warning { background-image: url('../assets/icons/#{$imagePath}/n-warning.svg'); }
+
+// Category
+.icon-beginnersGuide { background-image: url('../assets/icons/#{$imagePath}/category-beginnersGuide.svg'); }
+.icon-bonus { background-image: url('../assets/icons/#{$imagePath}/category-bonus.svg'); }
+.icon-loyalty { background-image: url('../assets/icons/#{$imagePath}/category-loyalty.svg'); }
+.icon-promotions { background-image: url('../assets/icons/#{$imagePath}/category-promotions.svg'); }
+.icon-shop { background-image: url('../assets/icons/#{$imagePath}/category-shop.svg'); }
+
+// Social Media
+.icon-facebook { background-image: url('../assets/icons/#{$imagePath}/socialmedia-facebook.svg'); }
+.icon-twitter { background-image: url('../assets/icons/#{$imagePath}/socialmedia-twitter.svg'); }
+
+// Rating
+.icon-ratingOff { background-image: url('../assets/icons/#{$imagePath}/gamepage-ratingOff.svg'); }
+.icon-ratingOn { background-image: url('../assets/icons/#{$imagePath}/gamepage-ratingOn.svg'); }
+
+
+// -------------------- Medium Icons --------------------
+
+
+// Tiles
+.icon-cards { background-image: url('../assets/icons/#{$imagePath}/tiles-cards.svg'); }
+.icon-favorites { background-image: url('../assets/icons/#{$imagePath}/tiles-favorites.svg'); }
+.icon-guaranteedWinnings { background-image: url('../assets/icons/#{$imagePath}/tiles-guaranteedWinnings.svg'); }
+.icon-jackpot { background-image: url('../assets/icons/#{$imagePath}/tiles-jackpot.svg'); }
+.icon-livecasino { background-image: url('../assets/icons/#{$imagePath}/tiles-livecasino.svg'); }
+.icon-love { background-image: url('../assets/icons/#{$imagePath}/tiles-love.svg'); }
+.icon-newGames { background-image: url('../assets/icons/#{$imagePath}/tiles-newGames.svg'); }
+.icon-tournament { background-image: url('../assets/icons/#{$imagePath}/tiles-tournament.svg'); }
+.icon-videoBingo { background-image: url('../assets/icons/#{$imagePath}/tiles-videoBingo.svg'); }
+
+// Loading
+.icon-loading { background-image: url('../assets/icons/#{$imagePath}/loading.svg'); }
+
+
+// -------------------- Large Icons --------------------
+
+
+// Tournament
+.icon-1stPlace { background-image: url('../assets/icons/#{$imagePath}/tournament-1stPlace.svg'); }
+.icon-2ndPlace { background-image: url('../assets/icons/#{$imagePath}/tournament-2ndPlace.svg'); }
+.icon-3rdPlace { background-image: url('../assets/icons/#{$imagePath}/tournament-3rdPlace.svg'); }
+.icon-participant { background-image: url('../assets/icons/#{$imagePath}/tournament-participant.svg'); }
+
+// Help Center
+.icon-beginnersGuide { background-image: url('../assets/icons/#{$imagePath}/helpcenter-beginnersGuide.svg'); }
+.icon-bonus { background-image: url('../assets/icons/#{$imagePath}/helpcenter-bonus.svg'); }
+.icon-call { background-image: url('../assets/icons/#{$imagePath}/helpcenter-call.svg'); }
+.icon-chat { background-image: url('../assets/icons/#{$imagePath}/helpcenter-chat.svg'); }
+.icon-deposit { background-image: url('../assets/icons/#{$imagePath}/helpcenter-deposit.svg'); }
+.icon-email { background-image: url('../assets/icons/#{$imagePath}/helpcenter-email.svg'); }
+.icon-gameTechnical { background-image: url('../assets/icons/#{$imagePath}/helpcenter-gameTechnical.svg'); }
+.icon-general { background-image: url('../assets/icons/#{$imagePath}/helpcenter-general.svg'); }
+.icon-myAccount { background-image: url('../assets/icons/#{$imagePath}/helpcenter-myAccount.svg'); }
+.icon-promotional { background-image: url('../assets/icons/#{$imagePath}/helpcenter-promotional.svg'); }
+.icon-responsibleGaming { background-image: url('../assets/icons/#{$imagePath}/helpcenter-responsibleGaming.svg'); }
+.icon-verification { background-image: url('../assets/icons/#{$imagePath}/helpcenter-verification.svg'); }
+.icon-withdrawal { background-image: url('../assets/icons/#{$imagePath}/helpcenter-withdrawal.svg'); }
+
+
+// -------------------- Logo Icons --------------------
+
+
+// Brand Logo
+.icon-brandLogo { background-image: url('../assets/logos/#{$imagePath}/brand.png'); }

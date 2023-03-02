@@ -1,0 +1,67 @@
+/* form control rules */
+
+// INPUT TEXT FOUNDATION STYLES
+.input-text {
+	height: fit-content;
+	width: auto;
+	line-height: 1.25em;
+    padding: 0.563em 1.2em;
+	outline: 0;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+    background: linear-gradient(var(--FRM-BACKGROUND-COLOR), var(--FRM-BACKGROUND-COLOR)), var(--FRM-BORDER-COLOR);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+	border: solid transparent;
+	color: var(--FRM-FONT-COLOR);
+	border-width: var(--FRM-BORDER-THICKNESS);
+	border-radius: var(--FRM-ROUNDNESS);
+	&:focus {
+		background: linear-gradient(var(--FRM-BACKGROUND-COLOR-FOCUS), var(--FRM-BACKGROUND-COLOR-FOCUS)), var(--FRM-BORDER-COLOR-FOCUS);
+		background-origin: padding-box, border-box;
+		background-clip: padding-box, border-box;
+	}
+}
+.input-text:disabled, .input-text.disabled {
+	opacity: 0.5;
+}
+
+// DEFAULT SIZE
+.input-text.fixsize {
+	font-size: var(--SIZE-FIX);
+}
+
+// SIZES
+.input-text.xs { font-size: var(--SIZE-1); }
+.input-text.sm { font-size: var(--SIZE-2); }
+.input-text.md { font-size: var(--SIZE-3); }
+.input-text.lg { font-size: var(--SIZE-4); }
+
+// device sizes
+// .input-text { font-size: var(--SIZE-1); }
+// @media only screen and (min-width: 375px) { .input-text { font-size: var(--SIZE-2); } }
+// @media only screen and (min-width: 768px) { .input-text { font-size: var(--SIZE-3); } }
+// @media only screen and (min-width: 1024px) { .input-text { font-size: var(--SIZE-4); } }
+
+// SELECT
+select.input-text {
+	padding: 0.563em 1.75em 0.563em 1.2em;
+    background: var(--SELECT-ICON) no-repeat, linear-gradient(var(--FRM-BACKGROUND-COLOR), var(--FRM-BACKGROUND-COLOR)), var(--FRM-BORDER-COLOR);
+    background-origin: padding-box, padding-box, border-box;
+    background-clip: padding-box, padding-box, border-box;
+	background-size: 0.75em, 100%, 100%;
+    background-position: calc(100% - 0.5em),right, right;
+	&:focus {
+		background: var(--SELECT-ICON) no-repeat, linear-gradient(var(--FRM-BACKGROUND-COLOR-FOCUS), var(--FRM-BACKGROUND-COLOR-FOCUS)), var(--FRM-BORDER-COLOR-FOCUS);
+		background-origin: padding-box, padding-box, border-box;
+		background-clip: padding-box, padding-box, border-box;
+		background-size: 0.75em, 100%, 100%;
+		background-position: calc(100% - 0.5em),right, right;
+	}
+}
+
+// TEXTAREA
+textarea.input-text {
+	border-radius: var(--FRM-ROUNDNESS-TEXTAREA);
+}

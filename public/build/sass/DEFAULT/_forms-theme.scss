@@ -1,0 +1,32 @@
+/* input fields DEFAULT theme */
+
+// SELECT
+:root {
+	--SELECT-ICON: url('../assets/icons/#{$imagePath}/n-dropdown.svg');
+}
+
+// INPUT TEXTS
+:root {
+	// sizes
+	--SIZE-FIX: 1.6rem;
+	--SIZE-1: 1.2rem;
+	--SIZE-2: 1.4rem;
+	--SIZE-3: 1.6rem;
+	--SIZE-4: 1.8rem;
+	--SIZE-5: 2rem;
+	// theme, colors
+	--FRM-BORDER-THICKNESS: 0.2em;
+	--FRM-ROUNDNESS: 0.5em;
+	--FRM-BORDER-COLOR: #727272;
+	--FRM-BORDER-COLOR-FOCUS: #737373;
+	--FRM-BACKGROUND-COLOR: #e3e3e3;
+	--FRM-BACKGROUND-COLOR-FOCUS: #ececec;
+	--FRM-FONT-COLOR: #212121;
+	--FRM-ROUNDNESS-TEXTAREA: 0.4em;
+}
+
+// device sizes
+.input-text { font-size: var(--SIZE-1); } // small mobile
+@media only screen and (min-width: 375px) { .input-text { font-size: var(--SIZE-2); } } // mobile
+@media only screen and (min-width: 768px) { .input-text { font-size: var(--SIZE-3); } } // tablet
+@media only screen and (min-width: 1024px) { .input-text { font-size: var(--SIZE-4); } } // dekstop

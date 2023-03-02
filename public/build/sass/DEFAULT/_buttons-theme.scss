@@ -1,0 +1,93 @@
+/* buttons default theme */
+
+// BUTTON LAYOUT
+@mixin button-layout {
+	line-height: 1.25em;
+	padding: 0.625em 1.5em;
+	border-style: solid;
+	border-width: 0.1rem;
+	border-radius: 0;
+}
+
+// BUTTON DEFAULT SIZE
+$button-default-size: 1.6rem;
+
+// BUTTON SIZES
+$button-size-1: 1.2rem;
+$button-size-2: 1.4rem;
+$button-size-3: 1.6rem;
+$button-size-4: 2rem;
+
+// DEFAULT BUTTON THEME
+@mixin button-theme {
+	color: var(--dark-100);
+	background: var(--light-200);
+	border-color: var(--gray-100);
+	font-family: "Arial", sans-serif;
+}
+@mixin button-hover {
+	color: var(--dark-100);
+	background: var(--light-300);
+	border-color: var(--gray-200);
+}
+@mixin button-focus {
+	background: var(--gray-100);
+	border-color: var(--gray-200);
+}
+
+// PRIMARY BUTTON THEME
+@mixin primary {
+	color: var(--white);
+	background: var(--blue-100);
+	border-color: var(--blue-200);
+}
+@mixin primary-hover {
+	color: var(--white);
+	background: var(--blue-300);
+	border-color: var(--blue-400);
+}
+@mixin primary-focus {
+	background: var(--blue-500);
+	border-color: var(--blue-500);
+}
+
+// SECONDARY BUTTON THEME
+@mixin secondary {
+	color: var(--dark-100);
+	background: var(--mint-100);
+	border-color: var(--mint-200);
+}
+@mixin secondary-hover {
+	color: var(--white);
+	background: var(--mint-200);
+	border-color: var(--mint-300);
+}
+@mixin secondary-focus {
+	color: var(--white);
+	background: var(--mint-400);
+	border-color: var(--mint-400);
+}
+
+// TERTIARY BUTTON THEME
+@mixin tertiary {
+	color: var(--white);
+	background: var(--gray-200);
+	border-color: var(--gray-300);
+}
+@mixin tertiary-hover {
+	color: var(--white);
+	background: var(--gray-300);
+	border-color: var(--gray-400);
+}
+@mixin tertiary-focus {
+	background: var(--gray-300);
+	border-color: var(--gray-400);
+}
+
+// NO BACKGROUND THEME
+@mixin nobg-hover {
+	background: var(--light-100);
+}
+@mixin nobg-focus {
+	background: var(--light-200);
+}

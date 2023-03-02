@@ -1,0 +1,29 @@
+// Custom
+
+.demo {
+    .block {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+body {
+    background-color: #c5c5c5;
+}
+
+// full width items
+.full-width {
+    display: grid;
+}
+// .full-width > * {
+//     width: auto;
+// }
+
+// half width items
+.half-width {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+// .half-width > * {
+//     width: auto;
+// }

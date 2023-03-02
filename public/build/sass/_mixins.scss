@@ -1,0 +1,570 @@
+/* CONTENTS
+
+- Border Radius
+- Gradients
+- Transitions
+- Grid and Flex Layouts
+- Forms
+- Truncate
+- Break word
+- Hide Text by Indent
+- Icons
+- Buttons
+- Typography
+- List
+- Overlay
+
+*/
+
+
+// -- BORDER RADIUS --
+
+@mixin border-radius ($roundness){
+    border-radius: $roundness;
+    -webkit-border-radius: $roundness;
+    -moz-border-radius: $roundness;
+}
+
+// -- GRADIENTS --
+
+@mixin box-border-gradient ($thickness, $roundness, $bg-color, $gradient-color) {
+    border: $thickness solid transparent;
+    @include border-radius($roundness);
+    background: linear-gradient(90deg, $bg-color, $bg-color), $gradient-color;
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+}
+
+@mixin border-top-gradient ($thickness, $gradient-color) {
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: $thickness;
+        background: $gradient-color;
+    }
+}
+
+@mixin border-bottom-gradient ($thickness, $gradient-color) {
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: $thickness;
+        background: $gradient-color;
+    }
+}
+
+// -- TRANSITIONS --
+
+@mixin transition-ease ($duration, $ease) {
+    -moz-transition: all $duration ease $ease;
+    -o-transition: all $duration ease $ease;
+    -ms-transition: all $duration ease $ease;
+    -webkit-transition: all $duration ease $ease;
+    transition: all $duration ease $ease;
+}
+
+
+// -- GRID AND FLEX LAYOUTS --
+
+// 3 columns
+
+@mixin flex-3x1-a {
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    > *:nth-child(2) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    > * {
+        margin: 0;
+    }
+}
+
+@mixin grid-3x1-y ($gap) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-self: right;
+    grid-gap: $gap;
+}
+
+// 2 columns
+
+@mixin grid-2x1-e ($gap) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: $gap;
+}
+
+@mixin grid-2x1-d ($gap) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: $gap;
+    > * {
+        width: 100%;
+    }
+}
+
+@mixin grid-2x1-1 ($gap) {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: fit-content;
+    margin: 0 auto;
+    grid-gap: $gap;
+}
+
+@mixin flex-2x1-r {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@mixin flex-2x1-h {
+    display: flex;
+    justify-content: space-between;
+}
+
+// Multi Rows
+@mixin grid-multirow-z ($gap) {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: $gap;
+    > * {
+        margin: 0 auto;
+    }
+}
+@mixin grid-multirow-j ($gap) {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: $gap;
+}
+
+// Multicolumns
+
+@mixin flex-multicol-o {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin grid-multicol-w ($width, $gap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
+    grid-gap: $gap;
+    > * { width: 100%; }
+}
+
+@mixin flex-multicol-2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+// -- FORMS --
+
+@mixin input-text (
+    $font-size, $padding, $thickness, $radius,
+    $color, $bg-color, $border-color,
+	$placeholder-color, $focus-color, $invalid-color,
+	$disabled-color,
+	$min-width
+    ) {
+    font-size: $font-size;
+    line-height: $font-size + 0.4;
+    padding: $padding;
+    border-width: $thickness;
+    @include border-radius($radius);
+
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color;
+
+    border-style: solid;
+    background-clip: border-box;
+    outline: 0;
+    -webkit-appearance: none;
+
+    &:placeholder {
+		color: $placeholder-color;
+	}
+	&:focus {
+        border-color: $focus-color;
+        border-width: $thickness;
+        @include border-radius($radius);
+    }
+	&.invalid, .invalid & { border-color: $invalid-color; }
+	&:disabled {border-color: $disabled-color; }
+	min-width: $min-width;
+}
+
+@mixin input-icon ( $bg-size, $icon-width, $icon-height, $left-space, $right-space ) {
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        background-repeat: no-repeat;
+        background-size: $bg-size;
+        width: $icon-width;
+        height: $icon-height;
+        position: absolute;
+        top: 50%;
+        left: $left-space;
+        right: $right-space;
+        transform: translate(0, -50%);
+    }
+}
+
+
+// -- TRUNCATE --
+
+@mixin truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+// -- BREAK WORD --
+
+@mixin break {
+	word-break: break-word !important;
+	overflow-wrap: break-word !important;
+}
+
+
+// -- HIDE TEXT BY INDENT --
+
+@mixin indent-hide {
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+
+// -- ICONS --
+
+@mixin icon {
+    @include indent-hide;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0;
+    min-width: 1.6rem;
+    min-height: 1.6rem;
+}
+
+@mixin icon-xs {
+    width: 1rem;
+    height: 1rem;
+}
+
+@mixin icon-sm {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+@mixin icon-md {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+@mixin icon-lg {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+@mixin icon-xl {
+    width: 4rem;
+    height: 4rem;
+}
+
+// ui
+
+@mixin icon-home { background-image: url('../icons/home.svg'); }
+@mixin icon-close { background-image: url('../icons/close.svg'); }
+@mixin icon-hamburger { background-image: url('../icons/hamburger.svg'); }
+@mixin icon-search { background-image: url('../icons/search.svg'); }
+
+@mixin icon-settings { background-image: url('../icons/gear.svg'); }
+@mixin icon-account { background-image: url('../icons/profile.svg'); }
+@mixin icon-profile { background-image: url('../icons/profile.svg'); }
+
+@mixin icon-bell { background-image: url('../icons/bell.svg'); }
+@mixin icon-info { background-image: url('../icons/info.svg'); }
+@mixin icon-help { background-image: url('../icons/help.svg'); }
+@mixin icon-lock { background-image: url('../icons/lock.svg'); }
+@mixin icon-flag { background-image: url('../icons/flag.svg'); }
+
+@mixin icon-list { background-image: url('../icons/list.svg'); }
+@mixin icon-grid { background-image: url('../icons/grid.svg'); }
+@mixin icon-filter { background-image: url('../icons/filter.svg'); }
+@mixin icon-dropdown { background-image: url('../icons/dropdown.svg'); }
+@mixin icon-20plus { background-image: url('../icons/20+.svg'); }
+
+// arrows
+
+@mixin icon-chevronDown { background-image: url('../icons/chevronDown.svg'); }
+@mixin icon-chevronLeft { background-image: url('../icons/chevronLeft.svg'); }
+@mixin icon-chevronRight { background-image: url('../icons/chevronRight.svg'); }
+
+@mixin icon-arrowLeft { background-image: url('../icons/arrowLeft.svg'); }
+@mixin icon-arrowRight { background-image: url('../icons/arrowRight.svg'); }
+@mixin icon-arrowTop { background-image: url('../icons/arrowTop.svg'); }
+@mixin icon-arrowDown { background-image: url('../icons/arrowDown.svg'); }
+
+@mixin icon-arrowLeftCircle { background-image: url('../icons/arrowLeftCircle.svg'); }
+@mixin icon-arrowRightCircle { background-image: url('../icons/arrowRightCircle.svg'); }
+@mixin icon-arrowTopCircle { background-image: url('../icons/arrowTopCircle.svg'); }    
+@mixin icon-arrowDownCircle { background-image: url('../icons/arrowDownCircle.svg'); }
+
+@mixin icon-caratRight { background-image: url('../icons/caratRight.svg'); }
+
+// branding
+
+@mixin icon-logo { background-image: url('../icons/logo.svg'); }
+@mixin icon-logo-min { background-image: url('../icons/logo-min.svg'); }
+
+@mixin icon-allgames { background-image: url('../icons/dice-ace.svg'); }
+@mixin icon-livecasino { background-image: url('../icons/aces.svg'); }
+@mixin icon-slots { background-image: url('../icons/slots.svg'); }
+@mixin icon-tablegames { background-image: url('../icons/tablegames.svg'); }
+@mixin icon-newgames { background-image: url('../icons/newgames-stroke.svg'); }
+
+@mixin icon-shop { background-image: url('../icons/shop.svg'); }
+@mixin icon-promotions { background-image: url('../icons/megaphone.svg'); }
+@mixin icon-beginners-guide { background-image: url('../icons/book.svg'); }
+@mixin icon-responsible-gaming { background-image: url('../icons/20+.svg'); }
+
+@mixin icon-loyalty { background-image: url('../icons/heart.svg'); }
+@mixin icon-trophy { background-image: url('../icons/trophy-stroke.svg'); }
+@mixin icon-level1 { background-image: url('../icons/level1.svg'); }
+
+@mixin icon-transactions { background-image: url('../icons/bill.svg'); }
+@mixin icon-gift { background-image: url('../icons/gift.svg'); }
+
+// game tag
+
+@mixin tag-newgames { background-image: url('../icons/newgames-solid.svg'); }
+
+// 3rd party
+
+@mixin logo-neteller { background-image: url('../logos/neteller.png'); width: 11.5rem; height: 2rem; }
+@mixin logo-ecopayz { background-image: url('../logos/ecopayz.png'); width: 8.4rem; height: 2rem; }
+
+@mixin logo-quickspin { background-image: url('../logos/quickspin.png'); width: 8.4rem; }
+@mixin logo-solidgaming { background-image: url('../logos/solidgaming.png'); width: 1.4rem; }
+
+@mixin logo-curacao { background-image: url('../logos/curacao.png'); }
+
+// flags
+
+@mixin flag-uk { background-image: url('../flags/uk.svg'); }
+
+
+// -- BUTTONS --
+
+// @mixin button {
+// 	display: flex;
+//     justify-content: center;
+//     align-items: center;
+// 	height: fit-content;
+// 	width: fit-content;
+// 	cursor: pointer;
+// 	text-decoration: none;
+// 	border-style: solid;
+// 	&:not(.disabled):not(.nobg):hover {
+// 		text-decoration: none;
+// 	}
+// 	&:not(.disabled):not(.nobg):focus {
+// 		outline: none;
+// 	}
+// 	&.disabled {
+// 		opacity: 0.5;
+// 		cursor: default;
+// 	}
+// 	&.button-icon > .icon { // ICON ONLY
+// 		margin: 0;
+// 	}
+// 	> .icon { // WITH ICON
+// 		margin-right: 1rem;
+// 	}
+// 	&.nobg {
+// 		background: none;
+// 		border: 0;
+// 	}
+// }
+
+// -- TYPOGRAPHY --
+
+// headings
+
+@mixin heading-basic ($color, $size, $weight, $height, $margin) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    margin: $margin;
+}
+@mixin heading-hero ($color) {
+    color: $color;
+    font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+@mixin heading-1 ($color) {
+    color: $color;
+    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+@mixin heading-2 ($color) {
+    color: $color;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+@mixin heading-3 ($color) {
+    color: $color;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+@mixin heading-4 ($color) {
+    color: $color;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.8em;
+    margin: 0.5rem 0;
+}
+@mixin heading-5 ($color) {
+    color: $color;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+@mixin heading-6 ($color) {
+    color: $color;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+
+// paragraphs
+
+@mixin paragraph-basic ($color, $size, $height, $margin) {
+    color: $color;
+    font-size: $size;
+    font-weight: normal;
+    line-height: $height;
+    margin: $margin;
+    strong {
+        color: $color;
+        font-weight: bold;
+    }
+    u {
+        color: $color;
+        text-decoration: underline;
+    }
+}
+@mixin paragraph-1 ($color) {
+    font-size: 1.5rem;
+    color: $color;
+    font-weight: normal;
+    line-height: 2.1rem;
+    margin: 0.5rem 0 1.5rem;
+    strong {
+        color: $color;
+        font-weight: bold;
+    }
+    u {
+        color: $color;
+        text-decoration: underline;
+    }
+}
+
+// links
+
+@mixin link-1 ($color, $hover-color, $focus-color, $visited-color) {
+	font-size: 1.5rem;
+	color: $color;
+	font-weight: normal;
+	text-decoration: underline;
+	&:hover { 
+		color: $hover-color;
+		text-decoration: none;
+    }
+    &:focus, &:active {
+        color: $focus-color;
+    }
+    &:visited {
+        color: $visited-color;
+    }
+}
+
+@mixin link-basic ($size, $color, $weight, $decoration, $hover-color, $hover-decoration, $focus-color, $visited-color) {
+	font-size: $size;
+	color: $color;
+	font-weight: $weight;
+    text-decoration: $decoration;
+    > * {
+        color: $color;
+    }
+	&:hover, &:hover > * { 
+		color: $hover-color;
+		text-decoration: $hover-decoration;
+    }
+    &:focus, &:active, &:focus > *, &:active > * {
+        color: $focus-color;
+    }
+    &:visited, &:visited > * {
+        color: $visited-color;
+    }
+}
+
+// hovers
+
+@mixin hover-underline {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// -- LIST --
+
+@mixin li-nostyle {
+    list-style: none;
+    padding: 0;
+    > * { list-style: none; }
+}
+
+// -- OVERLAY --
+
+@mixin overlay-dark ($bg-color) {
+    display: block;
+    background: $bg-color;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

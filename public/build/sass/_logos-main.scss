@@ -1,0 +1,147 @@
+/* payments */
+
+*[class*="logo-pay-"], *[class*="logo-prov-"] {
+    background-repeat: no-repeat;
+    display: block;
+	text-indent: -9999px;
+    overflow: hidden;
+}
+
+$width: 180px;
+$height: 70px;
+
+@mixin logo-sizing ($logo-width, $positioning) {
+    $logo-ratio: ($logo-width/$width);
+    $positioning: ($positioning - 1)*(-$height);
+    width: $width * $logo-ratio;
+    height: $height * $logo-ratio;
+    background-size: $logo-width;
+    background-position: 0 $positioning*($logo-ratio);
+}
+
+// ----- game providers -----
+
+*[class*="logo-pay-"] {
+    background-image: url('../assets/logos/#{$imagePath}/spritesheet-payments.png');
+}
+
+@mixin logo-payments-set ($logos-ratio) {
+    // desktop width -> 90px
+    .logo-pay-bitcoin {
+        @include logo-sizing (90px*$logos-ratio, 1);
+    }
+    // desktop width -> 90px
+    .logo-pay-ecopayz {
+        @include logo-sizing (90px*$logos-ratio, 2);
+    }
+    // desktop width -> 90px
+    .payment-10mastercard {
+        @include logo-sizing (90px*$logos-ratio, 3);
+    }
+    // desktop width -> 90px
+    .logo-pay-paypal {
+        @include logo-sizing (90px*$logos-ratio, 4);
+    }
+    // desktop width -> 90px
+    .logo-pay-paysafecard {
+        @include logo-sizing (90px*$logos-ratio, 5);
+    }
+    // desktop width -> 90px
+    .logo-pay-skrill {
+        @include logo-sizing (70px*$logos-ratio, 6);
+    }
+    // desktop width -> 90px
+    .logo-pay-trustly {
+        @include logo-sizing (90px*$logos-ratio, 7);
+    }
+    // desktop width -> 90px
+    .logo-pay-visa {
+        @include logo-sizing (70px*$logos-ratio, 8);
+    }
+    // desktop width -> 90px
+    .logo-pay-zimpler {
+        @include logo-sizing (90px*$logos-ratio, 9);
+    }
+    // desktop width -> 90px
+    .logo-pay-mastercard {
+        @include logo-sizing (70px*$logos-ratio, 10);
+    }
+}
+
+// mobile view - ratio = 0.85
+@include logo-payments-set (0.85);
+
+// tablet view - ratio = 0.9
+@media only screen and (min-width: 768px) {
+    @include logo-payments-set (0.9);
+}
+
+// desktop view - ratio = 1.2
+@media only screen and (min-width: 1024px) {
+    @include logo-payments-set (1.1);
+}
+
+// ----- game providers -----
+
+*[class*="logo-prov-"] {
+    background-image: url('../assets/logos/#{$imagePath}/spritesheet-providers.png');
+}
+
+@mixin logo-providers-set ($logos-ratio) {
+    // desktop width -> 90px
+    .logo-prov-asiagaming {
+        @include logo-sizing (90px*$logos-ratio, 1);
+    }
+    .logo-prov-betsoft {
+        @include logo-sizing (90px*$logos-ratio, 2);
+    }
+    .logo-prov-curacao {
+        @include logo-sizing (90px*$logos-ratio, 3);
+    }
+    .logo-prov-evolutiongaming {
+        @include logo-sizing (90px*$logos-ratio, 4);
+    }
+    .logo-prov-ezugi {
+        @include logo-sizing (90px*$logos-ratio, 5);
+    }
+    .logo-prov-gameplay {
+        @include logo-sizing (90px*$logos-ratio, 6);
+    }
+    .logo-prov-microgaming {
+        @include logo-sizing (90px*$logos-ratio, 7);
+    }
+    .logo-prov-neteller {
+        @include logo-sizing (90px*$logos-ratio, 8);
+    }
+    .logo-prov-pagcor {
+        @include logo-sizing (90px*$logos-ratio, 9);
+    }
+    .logo-prov-playngo {
+        @include logo-sizing (90px*$logos-ratio, 10);
+    }
+    .logo-prov-quickspin {
+        @include logo-sizing (90px*$logos-ratio, 11);
+    }
+    .logo-prov-solidgaming {
+        @include logo-sizing (90px*$logos-ratio, 12);
+    }
+    .logo-prov-taishan {
+        @include logo-sizing (90px*$logos-ratio, 13);
+    }
+    .logo-prov-yggdrasil {
+        @include logo-sizing (90px*$logos-ratio, 14);
+    }
+}
+
+// mobile view - ratio = 0.85
+@include logo-providers-set (0.85);
+
+// tablet view - ratio = 0.9
+@media only screen and (min-width: 768px) {
+    @include logo-providers-set (0.9);
+}
+
+// desktop view - ratio = 1.2
+@media only screen and (min-width: 1024px) {
+    @include logo-providers-set (1.1);
+}

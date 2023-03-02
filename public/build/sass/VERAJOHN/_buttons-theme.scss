@@ -1,0 +1,142 @@
+:root {
+	// DEFAULT COLOR
+
+	// default state
+	--BTN-FONTCOLOR: var(--dark-100);
+	--BTN-BGCOLOR: var(--light-200);
+	--BTN-FFAMILY: "Arial", sans-serif;
+	--BTN-ROUNDNESS: 0.8rem;
+	// hover state
+	--BTN-FONTCOLOR-hover: var(--dark-100);
+	--BTN-BGCOLOR-hover: var(--light-300);
+	// focus state
+	--BTN-BGCOLOR-focus: var(--gray-100);
+
+	// PRIMARY COLOR
+
+	// default state
+	--BTN-PRI-FONTCOLOR: #fff;
+	--BTN-PRI-BGCOLOR: linear-gradient(#2e8181, #71ada5);
+	--BTN-PRI-BORCOLOR: #71ada5;
+	// hover state
+	--BTN-PRI-FONTCOLOR-hover: #fff;
+	--BTN-PRI-BGCOLOR-hover: linear-gradient(#71ada5, #2e8181);
+	// focus state
+	--BTN-PRI-BGCOLOR-focus: var(--grad-YELLOW-300);
+
+	// SECONDARY COLOR
+
+	// default state
+	--BTN-SEC-FONTCOLOR: var(--white);
+	--BTN-SEC-BGCOLOR: linear-gradient(#9f7011, #bca76d);
+	--BTN-SEC-BORCOLOR: #9f7011;
+	// hover state
+	--BTN-SEC-FONTCOLOR-hover: var(--white);
+	--BTN-SEC-BGCOLOR-hover: linear-gradient(#bca76d, #9f7011);
+	// focus state
+	--BTN-SEC-BGCOLOR-focus: var(--grad-PINK-300);
+
+	// TERTIARY COLOR
+
+	// default state
+	--BTN-TER-FONTCOLOR: var(--white);
+	--BTN-TER-BGCOLOR: var(--grad-BLUE-200);;
+	// hover state
+	--BTN-TER-FONTCOLOR-hover: var(--white);
+	--BTN-TER-BGCOLOR-hover: var(--grad-BLUE-100);
+	// focus state
+	--BTN-TER-BGCOLOR-focus: var(--grad-BLUE-300);
+
+	// NO BACKGROUND
+
+	// hover state
+	--BTN-NOBG-BGCOLOR-hover: var(--overlay-neutral-100);
+	// focus state
+	--BTN-NOBG-BGCOLOR-focus: var(--overlay-neutral-100);
+}
+
+
+
+/* buttons verajohn theme */
+
+// BUTTON LAYOUT
+@mixin button-layout {
+	line-height: 1.25em;
+	padding: 0.625em 1.5em;
+	border-style: solid;
+	border-width: 0;
+	border-radius: var(--BTN-ROUNDNESS);
+}
+
+// BUTTON DEFAULT SIZE
+$button-default-size: 1.6rem;
+
+// BUTTON SIZES
+$button-size-1: 1.2rem;
+$button-size-2: 1.4rem;
+$button-size-3: 1.6rem;
+$button-size-4: 2rem;
+
+// DEFAULT BUTTON THEME
+@mixin button-theme {
+    color: var(--BTN-FONTCOLOR);
+    background: var(--BTN-BGCOLOR);
+	font-family: var(--BTN-FFAMILY);
+}
+@mixin button-hover {
+	color: var(--BTN-FONTCOLOR-hover);
+	background: var(--BTN-BGCOLOR-hover);
+}
+@mixin button-focus {
+	background: var(--BTN-BGCOLOR-focus);
+}
+
+// PRIMARY BUTTON THEME
+@mixin primary {
+	color: var(--BTN-PRI-FONTCOLOR);
+	background: var(--BTN-PRI-BGCOLOR);
+}
+@mixin primary-hover {
+	color: var(--BTN-PRI-FONTCOLOR-hover);
+	background: var(--BTN-PRI-BGCOLOR-hover);
+}
+@mixin primary-focus {
+	background: var(--BTN-PRI-BGCOLOR-focus);
+}
+.button-primary *[class*="icon-"] {
+	filter: var(--maroon-filter);
+}
+
+// SECONDARY BUTTON THEME
+@mixin secondary {
+	color: var(--BTN-SEC-FONTCOLOR);
+	background: var(--BTN-SEC-BGCOLOR);
+}
+@mixin secondary-hover {
+	color: var(--BTN-SEC-FONTCOLOR-hover);
+	background: var(--BTN-SEC-BGCOLOR-hover);
+}
+@mixin secondary-focus {
+	background: var(--BTN-SEC-BGCOLOR-focus);
+}
+
+// TERTIARY BUTTON THEME
+@mixin tertiary {
+	color: var(--BTN-TER-FONTCOLOR);
+	background: var(--BTN-TER-BGCOLOR);
+}
+@mixin tertiary-hover {
+	color: var(--BTN-TER-FONTCOLOR-hover);
+	background: var(--BTN-TER-BGCOLOR-hover);
+}
+@mixin tertiary-focus {
+	background: var(--BTN-TER-BGCOLOR-focus);
+}
+
+// NO BACKGROUND THEME
+@mixin nobg-hover {
+	background: var(--BTN-NOBG-BGCOLOR-hover);
+}
+@mixin nobg-focus {
+	background: var(--BTN-NOBG-BGCOLOR-focus);
+}

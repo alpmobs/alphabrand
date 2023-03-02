@@ -1,0 +1,176 @@
+/* buttons rules */
+
+// BUTTON CORE STYLES
+.button, *[class^="button-"] {
+	cursor: pointer;
+	text-decoration: none;
+	position: relative;
+	height: fit-content;
+	width: auto;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: auto auto;
+	grid-gap: 0.5em;
+	@include button-layout;
+}
+.button-iconOnly {
+	grid-gap: 0;
+}
+.button {
+	@include button-theme;
+	&:hover {
+		@include button-hover;
+	}
+	&:active, &:focus {
+		@include button-focus;	
+	}
+	&.disabled, &:disabled {
+		@include button-theme;
+	}
+}
+.button.disabled, *[class^="button-"].disabled,
+.button:disabled, *[class^="button-"]:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+// PRIMARY BUTTON
+.button-primary {
+	border: 1px solid var(--BTN-PRI-BORCOLOR);
+	@include primary;
+	&:hover {
+		@include primary-hover;
+	}
+	&:active, &:focus {
+		@include primary-focus;
+	}
+	&.disabled, &:disabled {
+		@include primary;
+	}
+}
+
+// SECONDARY BUTTON
+.button-secondary {
+	border: 0.2rem solid var(--BTN-SEC-BORCOLOR);
+	@include secondary;
+	&:hover {
+		@include secondary-hover;
+	}
+	&:active, &:focus {
+		@include secondary-focus;
+	}
+	&.disabled, &:disabled {
+		@include secondary;
+	}
+}
+
+// TERTIARY BUTTON
+.button-tertiary {
+	@include tertiary;
+	&:hover {
+		@include tertiary-hover;
+	}
+	&:active, &:focus {
+		@include tertiary-focus;
+	}
+	&.disabled, &:disabled {
+		@include tertiary;
+	}
+}
+
+// NO BACKGROUND BUTTON
+.button-nobg {
+	background: none;
+	border: 0;
+	&:hover {
+		@include nobg-hover;
+	}
+	&:active, &:focus {
+		@include nobg-focus;
+	}
+	&.disabled, &:disabled {
+		background: none;
+		border: 0;
+	}
+}
+
+// BUTTON DEFAULT SIZE
+.button, *[class^="button-"] {
+	font-size: $button-default-size;
+}
+// with icon
+.button, *[class^="button-"] {
+	.icon {
+		width: $button-size-3;
+		height: $button-size-3;
+	}
+}
+
+// BUTTON SIZES
+.button-xs {
+	font-size: $button-size-1;
+}
+.button-sm {
+	font-size: $button-size-2;
+}
+.button-md {
+	font-size: $button-size-3;
+}
+.button-lg {
+	font-size: $button-size-4;
+}
+// with icon
+.button-xs > .icon {
+	width: $button-size-1;
+	height: $button-size-1;
+}
+.button-sm > .icon {
+	width: $button-size-2;
+	height: $button-size-2;
+}
+.button-md > .icon {
+	width: $button-size-3;
+	height: $button-size-3;
+}
+.button-lg > .icon {
+	width: $button-size-4;
+	height: $button-size-4;
+}
+
+
+// RESPONSIVE BUTTON
+.button-res {
+	font-size: $button-size-1;
+}
+.button-res > .icon {
+	width: $button-size-1;
+	height: $button-size-1;
+}
+@media only screen and (min-width: 375px) {
+	.button-res {
+		font-size: $button-size-2;
+	}
+	.button-res > .icon {
+		width: $button-size-2;
+		height: $button-size-2;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.button-res {
+		font-size: $button-size-3;
+	}
+	.button-res > .icon {
+		width: $button-size-3;
+		height: $button-size-3;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.button-res {
+		font-size: $button-size-4;
+	}
+	.button-res > .icon {
+		width: $button-size-4;
+		height: $button-size-4;
+	}
+}

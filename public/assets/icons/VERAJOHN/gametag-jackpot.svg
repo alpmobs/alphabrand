@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 107.4 116.1" style="enable-background:new 0 0 107.4 116.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#B8DCE6;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#A4D0DB;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#B8DBE6;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#E8FAFF;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#9CCBD6;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#C8F0FA;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:url(#SVGID_2_);}
+</style>
+<g>
+	
+		<radialGradient id="SVGID_1_" cx="-614.4471" cy="471.8596" r="4.1314" gradientTransform="matrix(1.583285e-15 25.857 25.857 -1.583285e-15 -12151.96 15926.8115)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#2D8BE3"/>
+		<stop  offset="1" style="stop-color:#204FA1"/>
+	</radialGradient>
+	<path class="st0" d="M53.7,116.1c29.7,0,53.7-24,53.7-53.7S83.4,8.7,53.7,8.7S0,32.7,0,62.4S24,116.1,53.7,116.1z"/>
+</g>
+<path class="st1" d="M28.9,24.2L1.1,55.9h103.1L76.5,24.2H28.9z"/>
+<path class="st2" d="M29,24.2v31.6h47.4V24.2H29z"/>
+<path class="st3" d="M52.7,28.1l23.7,27.7H29L52.7,28.1z"/>
+<path class="st4" d="M52.7,51.8l23.7-27.6H29L52.7,51.8z"/>
+<path class="st5" d="M52.7,115.4l51.6-59.5H1.1L52.7,115.4z"/>
+<path class="st6" d="M52.7,115.8l24-59.9H28.7L52.7,115.8z"/>
+<radialGradient id="SVGID_2_" cx="-572.8729" cy="549.2955" r="3.3621" gradientTransform="matrix(3.776529e-16 6.1675 6.3261 -3.873650e-16 -3445.1731 3557.6494)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0.1"/>
+</radialGradient>
+<path class="st7" d="M29.8,29.1l-8.1,12.8l5-14.3l-15.1,1.7l14.3-5.1L15.1,13.4l12.9,8l1.7-15.1l1.7,15.1l12.9-8L33.7,24.2L48,29.3
+	l-15.1-1.7l5,14.3L29.8,29.1z"/>
+</svg>

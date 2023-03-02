@@ -1,0 +1,32 @@
+/* variables verajohn theme */
+
+:root {
+	// COLORS
+	--white: #fff;
+	--maroon: #4d002e;
+	--maroon-filter: brightness(0) saturate(100%) invert(7%) sepia(41%) saturate(6024%) hue-rotate(308deg) brightness(102%) contrast(109%);
+
+	--light-100: #ebebeb;
+	--light-200: #d6d6d6;
+	--light-300: #d0d0d0;
+	--light-400: #bfbfbf;
+	--overlay-neutral-100: rgba(235, 235, 235, 0.1);
+
+	--gray-100: #9e9e9e;
+
+	--dark-100: #1f1f1f;
+
+	--blue-300: #00496b;
+
+	--grad-YELLOW-100: linear-gradient(180deg, #FFE246 0%, #FFC933 34.95%, #FFB22F 100%);
+	--grad-YELLOW-200: linear-gradient(180deg, #FFC933 0%, #F7901D 100%);
+	--grad-YELLOW-300: linear-gradient(180deg, #F7901D 0%, #FFC933 100%);
+
+	--grad-PINK-100: linear-gradient(180deg, #FF5FE7 0%, #FF4BD4 26.85%, #FF32B9 51.39%, #FF1EA2 83.64%, #DD067F 100%);
+	--grad-PINK-200: linear-gradient(180deg, #FA57CC 0%, #F444B8 26.85%, #ED30A3 51.39%, #E51E8D 85.97%, #BB116D 100%);
+	--grad-PINK-300: linear-gradient(180deg, #C31473 0%, #E51F8E 16.01%, #EF36AA 57.87%, #F154C2 100%);
+
+	--grad-BLUE-100: linear-gradient(180deg, #25B7F2 0%, #2592C1 100%);
+	--grad-BLUE-200: linear-gradient(180deg, #4CB2DF 0%, #009FE3 22.74%, #0093D4 50.33%, #0082BA 85.39%, #005F87 100%);
+	--grad-BLUE-300: linear-gradient(180deg, rgba(1, 134, 192, 0) 50%, rgba(1, 134, 192, 0.47) 100%), linear-gradient(180deg, #0186C0 27.08%, #15A4E2 100%);
+}
